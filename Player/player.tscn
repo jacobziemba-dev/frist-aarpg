@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://5cqlx7tl1gm"]
+[gd_scene load_steps=15 format=3 uid="uid://5cqlx7tl1gm"]
 
 [ext_resource type="Script" uid="uid://cf5wi51kmnslc" path="res://Player/Scripts/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://8gg18v6l0emd" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://ufbob2wuebr7" path="res://Player/Scripts/player_state_machine.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://rignar2s3gxj" path="res://Player/Scripts/state_idle.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://brefab8puxbbb" path="res://Player/Scripts/state_walk.gd" id="5_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
 
@@ -158,3 +159,4 @@ script = ExtResource("3_btcbx")
 script = ExtResource("4_gwnis")
 
 [node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_k53q1")
