@@ -54,6 +54,11 @@ right={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_5="Walls"
+
 [plugins]
 
 ai_assistant_hub/preferences/thinking_target=0

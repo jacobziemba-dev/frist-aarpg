@@ -25,14 +25,18 @@ var direction: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	state_machine.Initialize(self)
 	pass # You can set up player-specific logic here.
-
+0
 # Called every frame. Handles input, movement, state changes, and animation updates.
 # 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# Calculate the direction vector based on input actions
-	direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-	pass 
+	# direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	# direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+	direction = Vector2(
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
+	).normalized()
+
 		
 
 func _physics_process(delta):
