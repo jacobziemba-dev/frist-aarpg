@@ -472,7 +472,7 @@ terrain_set_0/terrain_0/name = "Path"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_05x5g")
 
-[node name="Grass-01" type="TileMap"]
+[node name="grass-01" type="TileMap"]
 z_index = -1
 position = Vector2(-2, 0)
 tile_set = SubResource("TileSet_shhhk")

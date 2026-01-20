@@ -9,23 +9,17 @@ var cardinal_direction: Vector2 = Vector2.DOWN
 # Current input direction
 var direction: Vector2 = Vector2.ZERO
 
-
-
-
 # Reference node 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var state_machine : PlayerStateMachine= $StateMachine
-
-
-
+@onready var state_machine: PlayerStateMachine = $StateMachine
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	state_machine.Initialize(self)
 	pass # You can set up player-specific logic here.
-0
+
 # Called every frame. Handles input, movement, state changes, and animation updates.
 # 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -38,7 +32,6 @@ func _process(_delta: float) -> void:
 	).normalized()
 
 		
-
 func _physics_process(delta):
 	move_and_slide()
 
@@ -69,8 +62,6 @@ func SetDirection() -> bool:
 	return true
 	
 	
-
-
 # Updates the animation based on state and direction.
 func UpdateAnimation(state: String) -> void:
 	animation_player.play(state + "_" + AnimDirection())
