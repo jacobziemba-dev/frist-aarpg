@@ -1,0 +1,15 @@
+{
+  "name": "godot-mcp-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between Cursor MCP and Godot MCP WebSocket server",
+  "main": "godot-mcp-bridge.js",
+  "scripts": {
+    "start": "node godot-mcp-bridge.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
